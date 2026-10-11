@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>itsjustmp4 | Портфолио</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-primary: #c9d1d9;
+            --text-secondary: #8b949e;
+            --accent: #58a6ff;
+            --accent-hover: #79c0ff;
+            --border: #30363d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-top: 2rem;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .username {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-family: monospace;
+        }
+
+        .bio {
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .card .link-text {
+            margin-top: 1rem;
+            color: var(--accent);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Аватар автоматически подгружается с вашего аккаунта GitHub -->
+            <img src="https://github.com/itsjustmp4.png" alt="Avatar itsjustmp4" class="avatar">
+            <h1>itsjustmp4</h1>
+            <p class="username">@itsjustmp4</p>
+            <p class="bio">Добро пожаловать в мои проектов.</p>
+        </header>
+
+        <main class="projects">
+            <a href="https://itsjustmp4.github.io/cppcodeformatter/" class="card" target="_blank" rel="noopener noreferrer">
+                <h2>C++ Code Formatter</h2>
+                <p>Инструмент для автоматического форматирования кода на C++. Делает ваш код чистым, читаемым и соответствующим стандартам оформления.</p>
+                <span class="link-text">Открыть проект →</span>
+            </a>
+
+            <a href="https://itsjustmp4.github.io/py2cpp/" class="card" target="_blank" rel="noopener noreferrer">
+                <h2>Py2CPP</h2>
+                <p>Утилита для конвертации кода из Python в C++ и наоборот. Полезный инструмент для миграции проектов или оптимизации производительности.</p>
+                <span class="link-text">Открыть проект →</span>
+            </a>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2026 itsjustmp4. Все права защищены.</p>
+    </footer>
+</body>
+</html>
